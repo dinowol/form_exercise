@@ -9,14 +9,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const name = document.getElementById("name").value; //Get what the user entered in name field
     const email = document.getElementById("email").value; //Get what the user entered in email field
+    const number = document.getElementById("number").value;
 
     //Create a data object from these two inputs for your database
     const newData = {
       name: name,
-      email: email,
+      email: email ,
+      number: number,
     };
 
     let database = []; // Simulate a simple "database" using an array
+
+    
 
     //If we already have some items in our localStorage data we take them and put them back in our database
     if (localStorage.getItem("data")) {
@@ -25,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Also add our new data to the "database"
     database.push(newData);
+    
 
     // Store the updated data (old and new) in local storage again
     localStorage.setItem("data", JSON.stringify(database));

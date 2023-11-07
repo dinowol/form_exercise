@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //do this for each datapoint that you have
     data.forEach(function (item, index) {
       const listElement = document.createElement("li"); //Make a list element
-      listElement.textContent = `Name: ${item.name}, Email: ${item.email}`; //Put the name and the email inside the datapoint (item) as a nice text
+      listElement.textContent = `Name: ${item.name}, Email: ${item.email}, Number: ${item.number}`;  //Put the name and the email inside the datapoint (item) as a nice text
       dataList.appendChild(listElement); // Put it in the dataList
     });
   } else {
