@@ -9,11 +9,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const name = document.getElementById("name").value; //Get what the user entered in name field
     const email = document.getElementById("email").value; //Get what the user entered in email field
+    const phone = document.getElementById("phone").value; //Get what the user entered in email field
 
     //Create a data object from these two inputs for your database
     const newData = {
       name: name,
       email: email,
+      phone: phone,
     };
 
     let database = []; // Simulate a simple "database" using an array
@@ -36,3 +38,4 @@ document.addEventListener("DOMContentLoaded", function () {
     alert("Data submitted successfully!");
   });
 });
+
