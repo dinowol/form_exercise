@@ -11,6 +11,22 @@ document.addEventListener("DOMContentLoaded", function () {
     const email = document.getElementById("email").value; //Get what the user entered in email field
     const phone = document.getElementById("phone").value; //Get what the user entered in email field
 
+    let isFormValid = true;
+    // Get the value of the input field with id="numb"
+    let x = document.getElementById("phone").value;
+    // If x is Not a Number or less than one or greater than 10
+    let text;
+      if (isNaN(x) || x < 1 || x > 1000000000000) {
+        text = "Input not valid, only numbers please!";
+        isFormValid = false;
+      } else {
+        text = "Input OK";
+      }
+      document.getElementById("demo").innerHTML = text;
+    
+      if (!isFormValid) {
+        return;
+      }
     //Create a data object from these two inputs for your database
     const newData = {
       name: name,
