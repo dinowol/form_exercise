@@ -4,6 +4,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const data = JSON.parse(localStorage.getItem("data")); // Retrieve data from local storage
 
+ 
+
+
   //If there is data
   if (data && data.length > 0) {
     //do this for each datapoint that you have
@@ -18,4 +21,10 @@ document.addEventListener("DOMContentLoaded", function () {
     noDataText.textContent = "No data available."; //set the text of the paragraph element
     dataList.appendChild(noDataText); //put the paragraph into the datalist
   }
+
+  
+  
+  
 });
+
+

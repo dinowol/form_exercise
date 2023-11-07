@@ -11,6 +11,25 @@ document.addEventListener("DOMContentLoaded", function () {
     const email = document.getElementById("email").value; //Get what the user entered in email field
     const number = document.getElementById("number").value;
 
+
+    let isFormValid = true;
+    let x = document.getElementById("number").value;
+    let text;
+      if (isNaN(x) || x < 1 || x > 100000000000 ) {
+        text  = "input not valid";
+        isFormValid = false;
+      
+      }else{
+        text = "Input Ok";
+      }
+    document.getElementById("demo").innerHTML = text;
+  
+    if (!isFormValid) {
+    return;
+    }
+
+
+
     //Create a data object from these two inputs for your database
     const newData = {
       name: name,
@@ -20,7 +39,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let database = []; // Simulate a simple "database" using an array
 
-    
+  
+
+
 
     //If we already have some items in our localStorage data we take them and put them back in our database
     if (localStorage.getItem("data")) {
@@ -34,10 +55,21 @@ document.addEventListener("DOMContentLoaded", function () {
     // Store the updated data (old and new) in local storage again
     localStorage.setItem("data", JSON.stringify(database));
 
-    // Clear form fields so you can fill in new stuff
+    // Clear form fields so you can fll in new stuff
     dataForm.reset();
 
     //Alert the user that we submitted our data
     alert("Data submitted successfully!");
+
+
+
   });
+
+  
 });
+
+
+
+
+
+
